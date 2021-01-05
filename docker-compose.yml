@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+    php:
+        image: composer.insis.com.br:8083/inovadora-dev/php-cli:7.2-latest
+        volumes:
+            - $HOME/Documentos/code/financeiro:/home/inovadora/workspace
+        container_name: finphp
+
+###########################################################################
+#NETWORK
+###########################################################################
+
+networks:
+    default:
+        external:
+            name: finphp
